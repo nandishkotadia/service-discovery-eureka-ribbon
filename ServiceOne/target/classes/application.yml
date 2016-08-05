@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  
+ribbonclient:
+  ribbon:
+    DeploymentContextBasedVipAddresses: ribbon-client
+    listOfServers: localhost:8081,localhost:8082
+    ReadTimeout: 5000
+    MaxAutoRetries: 2
+
+spring:
+  application:
+    name: ServiceOne
+
+ribbon:
+  client:
+    name: ribbonclient
+    
+    
